@@ -34,7 +34,6 @@ class Comment(Base):
     comment_text = Column(String(500), nullable=False)
     author_id = Column(Integer, ForeignKey('user.id'))
     post_id = Column(Integer, ForeignKey('post.id'))
-    """ person = relationship(User) """
     
 class Post(Base):
     __tablename__ = 'post'
